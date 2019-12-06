@@ -1,0 +1,14 @@
+{
+  "name": "vue-cli-plugin-tauri",
+  "version": "0.0.1",
+  "description": "A Vue CLI plugin for rigging Tauri",
+  "main": "index.js",
+  "author": "Noah Klayman <noahklayman@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@vue/cli-shared-utils": "^4.1.1",
+    "execa": "^3.4.0",
+    "tauri": "^0.1.9"
+  }
+}
