@@ -1,5 +1,6 @@
 const execa = require('execa')
 const { error } = require('@vue/cli-shared-utils')
+const fs = require('fs-extra')
 
 module.exports = async api => {
   await execa('cargo', ['tauri-cli', '--version']).catch(() => {
@@ -12,6 +13,17 @@ module.exports = async api => {
     scripts: {
       'tauri:serve': 'vue-cli-service tauri:serve',
       'tauri:build': 'vue-cli-service tauri:build'
+    }
+  })
+  api.onCreateComplete(() => {
+    // Update .gitignore if it exists
+    if (fs.existsSync(api.resolve('./.gitignore'))) {
+      let gitignore = fs.readFileSync(api.resolve('./.gitignore'), 'utf8')
+      if (!/(# Tauri build output|\/dist_tauri)/.test(gitignore)) {
+        // Add /dist_tauri to .gitignore if it doesn't exist already
+        gitignore = gitignore + '\n#Tauri build output\n/dist_tauri'
+        fs.writeFileSync(api.resolve('./.gitignore'), gitignore)
+      }
     }
   })
 }
