@@ -66,7 +66,7 @@ module.exports = (api, options) => {
       // Use custom config for webpack
       process.env.TAURI_BUILD = true
       // Set publicPath so that scripts are properly imported
-      options.publicPath = './'
+      options.publicPath = ''
 
       if (!args.skipBundle) {
         try {
