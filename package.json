@@ -6,10 +6,24 @@
   "author": "Noah Klayman <noahklayman@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "test": "jest",
+    "pretest": "rimraf __tests__/temp_projects/*"
+  },
   "dependencies": {
     "@tauri-apps/tauri-webpack": "^0.1.4",
     "@vue/cli-shared-utils": "^4.1.1",
     "execa": "^3.4.0",
     "tauri": "^0.2.0"
+  },
+  "devDependencies": {
+    "@vue/cli": "^4.1.1",
+    "@vue/cli-plugin-babel": "^4.1.1",
+    "@vue/cli-service": "^4.1.1",
+    "@vue/cli-test-utils": "^4.1.1",
+    "jest": "^24.9.0",
+    "lnk": "^1.1.0",
+    "rimraf": "^3.0.0",
+    "vue": "^2.6.11"
   }
 }
