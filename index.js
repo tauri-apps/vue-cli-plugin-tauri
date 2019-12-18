@@ -1,8 +1,8 @@
 module.exports = (api, options) => {
   // If plugin options are provided in vue.config.js, those will be used. Otherwise it is empty object
   const pluginOptions =
-    options.pluginOptions && options.pluginOptions.electronBuilder
-      ? options.pluginOptions.electronBuilder
+    options.pluginOptions && options.pluginOptions.tauri
+      ? options.pluginOptions.tauri
       : {}
 
   api.chainWebpack(cfg => {
