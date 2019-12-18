@@ -1,6 +1,7 @@
 const execa = require('execa')
 const { error } = require('@vue/cli-shared-utils')
 const fs = require('fs-extra')
+const init = require('tauri/api/init')
 
 module.exports = async api => {
   await execa('cargo', ['tauri-cli', '--version']).catch(() => {
@@ -8,7 +9,11 @@ module.exports = async api => {
     error('Tauri CLI crate not installed')
     process.exit(1)
   })
-  require('tauri/bin/tauri-init')
+
+  init({
+    directory: api.resolve('.')
+  })
+
   api.extendPackage({
     scripts: {
       'tauri:serve': 'vue-cli-service tauri:serve',

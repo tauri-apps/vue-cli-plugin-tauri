@@ -7,8 +7,9 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "@tauri-apps/tauri-webpack": "^0.1.4",
     "@vue/cli-shared-utils": "^4.1.1",
     "execa": "^3.4.0",
-    "tauri": "^0.1.9"
+    "tauri": "^0.2.0"
   }
 }
