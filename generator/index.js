@@ -1,7 +1,7 @@
 const execa = require('execa')
 const { error } = require('@vue/cli-shared-utils')
 const fs = require('fs-extra')
-const init = require('tauri/api/init')
+const init = require('tauri/dist/api/init')
 
 module.exports = async api => {
   await execa('cargo', ['tauri-cli', '--version']).catch(() => {

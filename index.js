@@ -41,7 +41,7 @@ module.exports = (api, options) => {
       usage: 'todo'
     },
     async () => {
-      const dev = require('tauri/api/dev')
+      const dev = require('tauri/dist/api/dev')
 
       const server = await api.service.run('serve')
 
@@ -61,7 +61,7 @@ module.exports = (api, options) => {
       usage: 'todo'
     },
     async args => {
-      const build = require('tauri/api/build')
+      const build = require('tauri/dist/api/build')
 
       // Use custom config for webpack
       process.env.TAURI_BUILD = true
@@ -83,7 +83,7 @@ module.exports = (api, options) => {
 
       build({
         build: {
-          distDir: 'dist_tauri/bundled'
+          distDir: '../dist_tauri/bundled'
         }
       })
     }
