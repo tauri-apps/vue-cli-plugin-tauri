@@ -11,7 +11,10 @@ module.exports = async api => {
   })
 
   init({
-    directory: api.resolve('.')
+    directory: api.resolve('.'),
+    customConfig: {
+      build: null
+    }
   })
 
   api.extendPackage({

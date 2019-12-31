@@ -47,6 +47,8 @@ module.exports = (api, options) => {
 
       return dev({
         build: {
+          // Has to be a string, value doesn't matter
+          distDir: '',
           devPath: server.url
         }
       })
@@ -83,6 +85,8 @@ module.exports = (api, options) => {
 
       build({
         build: {
+          // Has to be a string, value doesn't matter
+          devPath: '',
           distDir: '../dist_tauri/bundled'
         }
       })
