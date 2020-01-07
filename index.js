@@ -88,7 +88,8 @@ module.exports = (api, options) => {
           // Has to be a string, value doesn't matter
           devPath: '',
           distDir: '../dist_tauri/bundled'
-        }
+        },
+        ctx: { debug: args.debug }
       })
     }
   )
