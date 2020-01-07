@@ -8,9 +8,18 @@ module.exports = (api, options) => {
   api.chainWebpack(cfg => {
     if (process.env.TAURI_BUILD) {
       // Setup require for no-server mode
-      const TauriRequirePlugin = require('@tauri-apps/tauri-webpack/plugins/tauri-require')
-        .plugin
-      cfg.plugin('tauri-require').use(TauriRequirePlugin)
+      const tauriConfig = require('tauri/dist/helpers/tauri-config')({
+        build: {
+          // Have to be empty strings
+          distDir: '',
+          devPath: ''
+        }
+      })
+      if (!tauriConfig.tauri.embeddedServer.active) {
+        const TauriRequirePlugin = require('@tauri-apps/tauri-webpack/plugins/tauri-require')
+          .plugin
+        cfg.plugin('tauri-require').use(TauriRequirePlugin)
+      }
 
       // Set IS_TAURI
       if (cfg.plugins.has('define')) {
