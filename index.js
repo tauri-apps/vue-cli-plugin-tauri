@@ -6,21 +6,7 @@ module.exports = (api, options) => {
       : {}
 
   api.chainWebpack(cfg => {
-    if (process.env.TAURI_BUILD) {
-      // Setup require for no-server mode
-      const tauriConfig = require('tauri/dist/helpers/tauri-config')({
-        build: {
-          // Have to be empty strings
-          distDir: '',
-          devPath: ''
-        }
-      })
-      if (!tauriConfig.tauri.embeddedServer.active) {
-        const TauriRequirePlugin = require('@tauri-apps/tauri-webpack/plugins/tauri-require')
-          .plugin
-        cfg.plugin('tauri-require').use(TauriRequirePlugin)
-      }
-
+    if (process.env.TAURI_SERVE || process.env.TAURI_BUILD) {
       // Set IS_TAURI
       if (cfg.plugins.has('define')) {
         cfg.plugin('define').tap(args => {
@@ -40,6 +26,22 @@ module.exports = (api, options) => {
         pluginOptions.chainWebpack(cfg)
       }
     }
+
+    if (process.env.TAURI_BUILD) {
+      // Setup require for no-server mode
+      const tauriConfig = require('tauri/dist/helpers/tauri-config')({
+        build: {
+          // Have to be empty strings
+          distDir: '',
+          devPath: ''
+        }
+      })
+      if (!tauriConfig.tauri.embeddedServer.active) {
+        const TauriRequirePlugin = require('@tauri-apps/tauri-webpack/plugins/tauri-require')
+          .plugin
+        cfg.plugin('tauri-require').use(TauriRequirePlugin)
+      }
+    }
   })
 
   api.registerCommand(
@@ -51,6 +53,9 @@ module.exports = (api, options) => {
     },
     async () => {
       const dev = require('tauri/dist/api/dev')
+
+      // Use custom config for webpack
+      process.env.TAURI_SERVE = true
 
       const server = await api.service.run('serve')
 
