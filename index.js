@@ -29,7 +29,7 @@ module.exports = (api, options) => {
 
     if (process.env.TAURI_BUILD) {
       // Setup require for no-server mode
-      const tauriConfig = require('tauri/dist/helpers/tauri-config')({
+      const tauriConfig = require('tauri/dist/helpers/tauri-config').default({
         build: {
           // Have to be empty strings
           distDir: '',
