@@ -78,6 +78,7 @@ module.exports = (api, options) => {
     },
     async args => {
       const build = require('tauri/dist/api/build')
+      const { error } = require('@vue/cli-shared-utils')
 
       // Use custom config for webpack
       process.env.TAURI_BUILD = true
