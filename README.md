@@ -11,7 +11,7 @@ Prerequisites:
 - NodeJS/npm
 - Vue CLI (`yarn global add @vue/cli` / `npm i -g @vue/cli`)
 - [Rust/Cargo](https://www.rust-lang.org/)
-- Tauri CLI (`cargo install tauri-cli`)
+- Tauri CLI (`cargo install tauri-bundler`)
 - [Yarn](https://yarnpkg.com/lang/en/) (optional but recommended over npm)
 
 Steps:
