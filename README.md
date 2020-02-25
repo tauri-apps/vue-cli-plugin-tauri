@@ -6,15 +6,22 @@ Turn your Vue SPA into a tiny cross platform desktop app that is fast and secure
 
 ## Installation
 
-Prerequisites:
+Please read the general Tauri wiki if you run into any problems: https://github.com/tauri-apps/tauri/wiki
 
+### Prerequisites:
 - NodeJS/npm
 - Vue CLI (`yarn global add @vue/cli` / `npm i -g @vue/cli`)
 - [Rust/Cargo](https://www.rust-lang.org/)
 - Tauri CLI (`cargo install tauri-bundler`)
 - [Yarn](https://yarnpkg.com/lang/en/) (optional but recommended over npm)
 
-Steps:
+### OS Specifics
+- Linux: https://github.com/tauri-apps/tauri/wiki/02.-Linux-Setup
+- Mac: https://github.com/tauri-apps/tauri/wiki/03.-MacOS-Setup
+- Windows: https://github.com/tauri-apps/tauri/wiki/04.-MS-Windows-Setup
+
+
+### Steps:
 
 1. Create a Vue CLI project (or cd into an existing one)
 
