@@ -4,7 +4,7 @@ const fs = require('fs-extra')
 const init = require('tauri/dist/api/init')
 
 module.exports = async (api, options) => {
-  await execa('cargo', ['tauri-cli', '--version']).catch(() => {
+  await execa('cargo', ['tauri-bundler', '--version']).catch(() => {
     // TODO: provide better error
     error('Tauri CLI crate not installed')
     process.exit(1)
