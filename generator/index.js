@@ -5,8 +5,9 @@ const init = require('tauri/dist/api/init')
 
 module.exports = async (api, options) => {
   await execa('cargo', ['tauri-bundler', '--version']).catch(() => {
-    // TODO: provide better error
-    error('Tauri CLI crate not installed')
+    error(
+      'Tauri bundler crate not installed. Have you installed it with "cargo install tauri-bundler"?'
+    )
     process.exit(1)
   })
 
