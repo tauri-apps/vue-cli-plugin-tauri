@@ -14,7 +14,7 @@
     "@tauri-apps/tauri-webpack": "^0.2.0",
     "@vue/cli-shared-utils": "^4.1.1",
     "execa": "^3.4.0",
-    "tauri": "^0.4.3"
+    "tauri": "^0.5.1"
   },
   "devDependencies": {
     "@vue/cli": "^4.1.1",

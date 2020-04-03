@@ -61,8 +61,8 @@ module.exports = (api, options) => {
 
       return dev({
         build: {
-          // Has to be a string, value doesn't matter
-          distDir: '',
+          // Has to be a valid dir, contents don't matter
+          distDir: api.resolve('.'),
           devPath: server.url
         }
       })
