@@ -84,8 +84,8 @@ module.exports = (api, options) => {
 
       build({
         build: {
-          // Has to be a string, value doesn't matter
-          devPath: '',
+          // Has to be a non-empty string, value doesn't matter
+          devPath: ' ',
           distDir: '../dist_tauri/bundled'
         },
         ctx: { debug: args.debug }
