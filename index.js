@@ -26,22 +26,6 @@ module.exports = (api, options) => {
         pluginOptions.chainWebpack(cfg)
       }
     }
-
-    if (process.env.TAURI_BUILD) {
-      // Setup require for no-server mode
-      const tauriConfig = require('tauri/dist/helpers/tauri-config').default({
-        build: {
-          // Have to be empty strings
-          distDir: '',
-          devPath: ''
-        }
-      })
-      if (!tauriConfig.tauri.embeddedServer.active) {
-        const TauriRequirePlugin = require('@tauri-apps/tauri-webpack/plugins/tauri-require')
-          .plugin
-        cfg.plugin('tauri-require').use(TauriRequirePlugin)
-      }
-    }
   })
 
   api.registerCommand(

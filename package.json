@@ -11,7 +11,6 @@
     "pretest": "rimraf __tests__/temp_projects/*"
   },
   "dependencies": {
-    "@tauri-apps/tauri-webpack": "^0.2.0",
     "@vue/cli-shared-utils": "^4.1.1",
     "execa": "^3.4.0",
     "tauri": "^0.5.1"
