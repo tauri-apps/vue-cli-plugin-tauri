@@ -6,7 +6,7 @@ Turn your Vue SPA into a tiny cross platform desktop app that is fast and secure
 
 ## Installation
 
-Please read the general Tauri wiki if you run into any problems: https://github.com/tauri-apps/tauri/wiki.
+Please visit the documentation website if you have any problems: https://tauri.studio 
 
 ### General Prerequisites:
 
