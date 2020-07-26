@@ -88,7 +88,8 @@ module.exports = (api, options) => {
           devPath: ' ',
           distDir: '../dist_tauri/bundled'
         },
-        ctx: { debug: args.debug }
+        ctx: { debug: args.debug },
+        verbose: args.verbose
       })
     }
   )
