@@ -5,11 +5,11 @@ module.exports = (api, options) => {
       ? options.pluginOptions.tauri
       : {}
 
-  api.chainWebpack(cfg => {
+  api.chainWebpack((cfg) => {
     if (process.env.TAURI_SERVE || process.env.TAURI_BUILD) {
       // Set IS_TAURI
       if (cfg.plugins.has('define')) {
-        cfg.plugin('define').tap(args => {
+        cfg.plugin('define').tap((args) => {
           args[0]['process.env'].IS_TAURI = true
           return args
         })
@@ -60,7 +60,7 @@ module.exports = (api, options) => {
       description: 'todo',
       usage: 'todo'
     },
-    async args => {
+    async (args) => {
       const build = require('tauri/dist/api/build')
       const { error } = require('@vue/cli-shared-utils')
 
@@ -72,7 +72,7 @@ module.exports = (api, options) => {
       if (!args.skipBundle) {
         try {
           await api.service.run('build', {
-            dest: 'dist_tauri/bundled'
+            dest: 'dist_tauri/webpack_dist'
           })
         } catch (e) {
           error(
@@ -82,11 +82,12 @@ module.exports = (api, options) => {
         }
       }
 
+      process.env.CARGO_TARGET_DIR = api.resolve('dist_tauri')
       build({
         build: {
           // Has to be a non-empty string, value doesn't matter
           devPath: ' ',
-          distDir: '../dist_tauri/bundled'
+          distDir: '../dist_tauri/webpack_dist'
         },
         ctx: { debug: args.debug },
         verbose: args.verbose
