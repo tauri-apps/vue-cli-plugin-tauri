@@ -13334,10 +13334,10 @@ tasklist@^3.1.0:
     pify "^2.2.0"
     sec "^1.0.0"
 
-tauri@^0.11.0:
-  version "0.11.0"
-  resolved "https://registry.yarnpkg.com/tauri/-/tauri-0.11.0.tgz#6f62308383086897c601cce391f08ddba3de5d47"
-  integrity sha512-2iWw7QCb2/wzZuu4HAPboKb4y158PxnIR9jTLmKFofKn0/uLx20wdUX4fOJg2caT2ahbaT3HQZ0LYD2iYk8vuQ==
+tauri@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/tauri/-/tauri-0.11.1.tgz#a49cd1412ad42c810f812942aabd14b85500231a"
+  integrity sha512-rcnUBpK4vwfc+O0tQcFNNxd8ItHg0DH7CrtzTlWBukrHw7HxuoOQgzqu+o2+UZNlgL4togVky16UhUEG2Djgrw==
   dependencies:
     "@tauri-apps/tauri-inliner" "1.14.1"
     "@tauri-apps/toml" "2.2.4"

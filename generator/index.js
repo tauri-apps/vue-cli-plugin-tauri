@@ -13,6 +13,7 @@ module.exports = async (api, options) => {
 
   init({
     directory: api.resolve('.'),
+    appName: options.appName,
     customConfig: {
       build: null,
       tauri: {
