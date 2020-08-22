@@ -1,8 +1,6 @@
 # vue-cli-plugin-tauri
 
-> A Vue CLI plugin for rigging [Tauri](https://github.com/tauri-apps/tauri)
-
-Turn your Vue SPA into a tiny cross platform desktop app that is fast and secure.
+> [Tauri](https://tauri.studio) is a toolkit for creating smaller, faster, and more secure desktops applications with a web frontend. This plugin configures Tauri to work in your Vue CLI project.
 
 ## Installation
 
@@ -16,7 +14,7 @@ Please visit the [documentation website](https://tauri.studio) or our [discord s
 - Tauri CLI (`cargo install tauri-bundler`)
 - [Yarn](https://yarnpkg.com/lang/en/) (optional but recommended over npm)
 
-### Detailed Installation Instructions:
+### Detailed Prerequisite Installation Instructions:
 
 - Linux: https://tauri.studio/docs/getting-started/setup-linux/
 - Mac: https://tauri.studio/docs/getting-started/setup-macos/
@@ -44,7 +42,7 @@ With Yarn:
 ```bash
 # Start dev server with HMR
 yarn tauri:serve
-# Build executable (dist in src-tauri/target/release)
+# Build executable
 yarn tauri:build
 ```
 
@@ -53,6 +51,6 @@ With npm:
 ```bash
 # Start dev server with HMR
 npm run tauri:serve
-# Build executable (dist in src-tauri/target/release)
+# Build executable
 npm run tauri:build
 ```
