@@ -13,7 +13,7 @@
   "dependencies": {
     "@vue/cli-shared-utils": "^4.1.1",
     "execa": "^3.4.0",
-    "tauri": "^0.11.1"
+    "tauri": "^0.12.0"
   },
   "devDependencies": {
     "@vue/cli": "^4.1.1",
