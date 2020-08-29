@@ -20,6 +20,29 @@ module.exports = (api, options) => {
           }
         ])
       }
+      if (cfg.plugins.has('copy')) {
+        cfg.plugin('copy').tap((args) => {
+          args[0].push({
+            from: 'src-tauri/icons/',
+            to: '../../icons',
+            force: true
+          });
+          return args;
+        })
+      } else {
+        cfg.plugin('copy').use(CopyPlugin, [
+          {
+            patterns: [
+              {
+                from: 'src-tauri/icons/',
+                to: '../../icons',
+                force: true
+              }
+            ]
+          }
+
+        ]);
+      }
 
       // Apply custom config from user
       if (pluginOptions.chainWebpack) {
@@ -72,7 +95,7 @@ module.exports = (api, options) => {
       if (!args.skipBundle) {
         try {
           await api.service.run('build', {
-            dest: 'dist_tauri/webpack_dist'
+            dest: 'dist_tauri/target/webpack_dist'
           })
         } catch (e) {
           error(
@@ -82,12 +105,12 @@ module.exports = (api, options) => {
         }
       }
 
-      process.env.CARGO_TARGET_DIR = api.resolve('dist_tauri')
+      process.env.CARGO_TARGET_DIR = api.resolve('dist_tauri/target')
       build({
         build: {
           // Has to be a non-empty string, value doesn't matter
           devPath: ' ',
-          distDir: '../dist_tauri/webpack_dist'
+          distDir: '../dist_tauri/target/webpack_dist'
         },
         ctx: { debug: args.debug },
         verbose: args.verbose
