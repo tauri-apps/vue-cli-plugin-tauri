@@ -82,6 +82,7 @@ module.exports = (api, options) => {
         }
       }
 
+      process.env.CARGO_TARGET_DIR = api.resolve('src-tauri/target');
       build({
         build: {
           // Has to be a non-empty string, value doesn't matter
