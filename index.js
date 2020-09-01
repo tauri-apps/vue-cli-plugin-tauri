@@ -72,7 +72,7 @@ module.exports = (api, options) => {
       if (!args.skipBundle) {
         try {
           await api.service.run('build', {
-            dest: 'dist_tauri/webpack_dist'
+            dest: 'src-tauri/target/webpack_dist'
           })
         } catch (e) {
           error(
@@ -82,12 +82,11 @@ module.exports = (api, options) => {
         }
       }
 
-      process.env.CARGO_TARGET_DIR = api.resolve('dist_tauri')
       build({
         build: {
           // Has to be a non-empty string, value doesn't matter
           devPath: ' ',
-          distDir: '../dist_tauri/webpack_dist'
+          distDir: './target/webpack_dist'
         },
         ctx: { debug: args.debug },
         verbose: args.verbose

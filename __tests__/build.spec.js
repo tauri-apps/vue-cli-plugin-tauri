@@ -6,10 +6,14 @@ describe('tauri:build', () => {
     const project = await create('build')
     await project.run('vue-cli-service tauri:build')
     // Web code is built
-    expect(project.has('dist_tauri/webpack_dist/index.html')).toBe(true)
+    expect(project.has('src-tauri/target/webpack_dist/index.html')).toBe(true)
     // Tauri app is built
-    expect(project.has('dist_tauri/release/app')).toBe(true)
-    expect(project.has('dist_tauri/release/bundle/appimage/app.AppImage')).toBe(true)
-    expect(project.has('dist_tauri/release/bundle/deb/app_0.1.0_amd64.deb')).toBe(true)
+    expect(project.has('src-tauri/target/release/app')).toBe(true)
+    expect(
+      project.has('src-tauri/target/release/bundle/appimage/app.AppImage')
+    ).toBe(true)
+    expect(
+      project.has('src-tauri/target/release/bundle/deb/app_0.1.0_amd64.deb')
+    ).toBe(true)
   })
 })
