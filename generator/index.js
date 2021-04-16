@@ -1,6 +1,6 @@
 const execa = require('execa')
 const { error } = require('@vue/cli-shared-utils')
-const init = require('tauri/dist/api/init')
+const { init } = require('@tauri-apps/cli/dist/api/cli')
 
 module.exports = async (api, options) => {
   await execa('cargo', ['tauri-bundler', '--version']).catch(() => {
@@ -13,14 +13,9 @@ module.exports = async (api, options) => {
   init({
     directory: api.resolve('.'),
     appName: options.appName,
-    customConfig: {
-      build: null,
-      tauri: {
-        window: {
-          title: options.windowTitle
-        }
-      }
-    }
+    windowTitle: options.windowTitle,
+    distDir: 'Set automatically by Vue CLI plugin',
+    devPath: 'Set automatically by Vue CLI plugin'
   })
 
   api.extendPackage({

@@ -11,9 +11,9 @@
     "pretest": "rimraf __tests__/temp_projects/*"
   },
   "dependencies": {
+    "@tauri-apps/cli": "^1.0.0-beta-rc.1",
     "@vue/cli-shared-utils": "^4.1.1",
-    "execa": "^3.4.0",
-    "tauri": "^0.14.0"
+    "execa": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli": "^4.1.1",

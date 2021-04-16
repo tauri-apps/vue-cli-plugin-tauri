@@ -36,7 +36,7 @@ module.exports = (api, options) => {
       usage: 'todo'
     },
     async () => {
-      const dev = require('tauri/dist/api/dev')
+      const { dev } = require('@tauri-apps/cli/dist/api/cli')
 
       // Use custom config for webpack
       process.env.TAURI_SERVE = true
@@ -44,10 +44,10 @@ module.exports = (api, options) => {
       const server = await api.service.run('serve')
 
       return dev({
-        build: {
-          // Has to be a valid dir, contents don't matter
-          distDir: api.resolve('.'),
-          devPath: server.url
+        config: {
+          build: {
+            devPath: server.url
+          }
         }
       })
     }
@@ -61,7 +61,7 @@ module.exports = (api, options) => {
       usage: 'todo'
     },
     async (args) => {
-      const build = require('tauri/dist/api/build')
+      const { build } = require('@tauri-apps/cli/dist/api/cli')
       const { error } = require('@vue/cli-shared-utils')
 
       // Use custom config for webpack
@@ -83,13 +83,14 @@ module.exports = (api, options) => {
       }
 
       build({
-        build: {
-          // Has to be a non-empty string, value doesn't matter
-          devPath: ' ',
-          distDir: './target/webpack_dist'
+        config: {
+          build: {
+            distDir: './target/webpack_dist'
+          }
         },
-        ctx: { debug: args.debug },
-        verbose: args.verbose
+        verbose: args.v || args.verbose || false,
+        debug: args.d || args.debug || false,
+        target: args.t || args.target || false
       })
     }
   )
