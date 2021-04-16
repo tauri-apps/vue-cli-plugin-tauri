@@ -10,7 +10,9 @@ describe('tauri:build', () => {
     // Tauri app is built
     expect(project.has('src-tauri/target/release/app')).toBe(true)
     expect(
-      project.has('src-tauri/target/release/bundle/appimage/app.AppImage')
+      project.has(
+        'src-tauri/target/release/bundle/appimage/app_0.1.0_amd64.AppImage'
+      )
     ).toBe(true)
     expect(
       project.has('src-tauri/target/release/bundle/deb/app_0.1.0_amd64.deb')
