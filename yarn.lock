@@ -1800,10 +1800,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tauri-apps/cli@1.0.0-beta-rc.1":
-  version "1.0.0-beta-rc.1"
-  resolved "https://registry.yarnpkg.com/@tauri-apps/cli/-/cli-1.0.0-beta-rc.1.tgz#2afc2e28ddbaba8516df37bf8b552273faff172b"
-  integrity sha512-GLRPBm6Km/knPfxNgJL0qZTzwHqz8Qg8WpblJMoKE5n5j/6/LPZ4vmrsfgokxTTbKl12l3XpmkPyLsJcvXyqjQ==
+"@tauri-apps/cli@1.0.0-beta-rc.2":
+  version "1.0.0-beta-rc.2"
+  resolved "https://registry.yarnpkg.com/@tauri-apps/cli/-/cli-1.0.0-beta-rc.2.tgz#baeb5b297e1d1995ce43e6df29d140d9a54520b2"
+  integrity sha512-cV6muP6O8mqziI3OH34OpMtoThPFtD0qvOiJOJNc/OsHhZyL6Hji/uSOaR35mQjUgsHll3ad/SOQRCrwaB6mDg==
   dependencies:
     "@tauri-apps/toml" "2.2.4"
     chalk "4.1.0"
