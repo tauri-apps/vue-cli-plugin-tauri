@@ -90,7 +90,8 @@ module.exports = (api, options) => {
         },
         verbose: args.v || args.verbose || false,
         debug: args.d || args.debug || false,
-        target: args.t || args.target || false
+        target: args.t || args.target || false,
+        bundle: args.b || args.bundle || false
       })
     }
   )
