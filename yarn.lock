@@ -1678,10 +1678,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@tauri-apps/cli@1.0.0-beta.3":
-  version "1.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@tauri-apps/cli/-/cli-1.0.0-beta.3.tgz#cede848e26122c8ee607749d84269fcc8d3c2ee1"
-  integrity sha512-Z6XAYAgwTuVjEl+gV8Q9t/5Q0Bup4zAU98Y7Mf/5TkIk5gcl31JbvQjskZ1dBxH92817cobbyNmKjsbSaVJXgg==
+"@tauri-apps/cli@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@tauri-apps/cli/-/cli-1.0.0-beta.6.tgz#29e461036ea36a935cd91c0e290957c922ff9aa4"
+  integrity sha512-zcF7+diZk3LHcS1/Rwo2f/6hRMY9fOVQYSgqSkjZDGGkTXhysrEiCCc4DwLmB1QES9P0lhRt4CPBJLpH0MdsWA==
   dependencies:
     "@tauri-apps/toml" "2.2.4"
     chalk "4.1.1"
@@ -5689,7 +5689,7 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-execa@^3.3.0, execa@^3.4.0:
+execa@^3.3.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/execa/-/execa-3.4.0.tgz#c08ed4550ef65d858fac269ffc8572446f37eb89"
   integrity sha512-r9vdGQk4bmCuK1yKQu1KTwcT2zwfWdbdaXfCtAh+5nU/4fSX+JAb7vZGvI5naJrQlvONrEB20jeruESI69530g==
@@ -13047,9 +13047,9 @@ vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
     loader-utils "^1.0.2"
 
 vue-template-compiler@^2.6.12:
-  version "2.6.12"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.12.tgz#947ed7196744c8a5285ebe1233fe960437fcc57e"
-  integrity sha512-OzzZ52zS41YUbkCBfdXShQTe69j1gQDZ9HIX8miuC9C3rBCk9wIRjLiZZLrmX9V+Ftq/YEyv1JaVr5Y/hNtByg==
+  version "2.6.14"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.14.tgz#a2f0e7d985670d42c9c9ee0d044fed7690f4f763"
+  integrity sha512-ODQS1SyMbjKoO1JBJZojSw6FE4qnh9rIpUZn2EUT86FKizx9uH5z6uXiIrm4/Nb/gwxTi/o17ZDEGWAXHvtC7g==
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -13060,9 +13060,9 @@ vue-template-es2015-compiler@^1.9.0:
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
 vue@^2.6.11:
-  version "2.6.12"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
-  integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
+  version "2.6.14"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
+  integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

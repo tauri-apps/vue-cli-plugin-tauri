@@ -4,21 +4,19 @@
 
 ## Installation
 
-Please visit the [documentation website](https://tauri.studio) or our [discord server](https://discord.gg/SpmNs4S) if you have any problems.
+Please visit the [documentation website](https://tauri.studio) or our [discord server](https://discord.gg/tauri) if you have any problems.
 
 ### General Prerequisites:
 
 - NodeJS/npm
 - Vue CLI (`yarn global add @vue/cli` / `npm i -g @vue/cli`)
 - [Rust/Cargo](https://www.rust-lang.org/)
-- Tauri CLI (`cargo install tauri-bundler`)
-- [Yarn](https://yarnpkg.com/lang/en/) (optional but recommended over npm)
 
 ### Detailed Prerequisite Installation Instructions:
 
-- Linux: https://tauri.studio/docs/getting-started/setup-linux/
-- Mac: https://tauri.studio/docs/getting-started/setup-macos/
-- Windows: https://tauri.studio/docs/getting-started/setup-windows/
+- Linux: https://tauri.studio/docs/getting-started/setup-linux
+- Mac: https://tauri.studio/docs/getting-started/setup-macos
+- Windows: https://tauri.studio/docs/getting-started/setup-windows
 
 ### Steps:
 
