@@ -36,7 +36,7 @@ module.exports = (api, options) => {
       usage: 'todo'
     },
     async () => {
-      const { dev } = require('@tauri-apps/cli/dist/api/cli')
+      const { dev } = require('@tauri-apps/cli/dist/api/cli.cjs')
 
       // Use custom config for webpack
       process.env.TAURI_SERVE = true
@@ -61,7 +61,7 @@ module.exports = (api, options) => {
       usage: 'todo'
     },
     async (args) => {
-      const { build } = require('@tauri-apps/cli/dist/api/cli')
+      const { build } = require('@tauri-apps/cli/dist/api/cli.cjs')
       const { error } = require('@vue/cli-shared-utils')
 
       // Use custom config for webpack

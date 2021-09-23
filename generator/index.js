@@ -1,4 +1,4 @@
-const { init } = require('@tauri-apps/cli/dist/api/cli')
+const { init } = require('@tauri-apps/cli/dist/api/cli.cjs')
 
 module.exports = async (api, options) => {
   init({
