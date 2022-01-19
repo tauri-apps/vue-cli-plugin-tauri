@@ -14,9 +14,9 @@ Please visit the [documentation website](https://tauri.studio) or our [discord s
 
 ### Detailed Prerequisite Installation Instructions:
 
-- Linux: https://tauri.studio/docs/getting-started/setup-linux
-- Mac: https://tauri.studio/docs/getting-started/setup-macos
-- Windows: https://tauri.studio/docs/getting-started/setup-windows
+- Linux: https://tauri.studio/docs/get-started/setup-linux
+- Mac: https://tauri.studio/docs/get-started/setup-macos
+- Windows: https://tauri.studio/docs/get-started/setup-windows
 
 ### Steps:
 
