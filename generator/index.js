@@ -1,13 +1,14 @@
-const { init } = require('@tauri-apps/cli/dist/api/cli')
+const cli = require('@tauri-apps/cli')
 
 module.exports = async (api, options) => {
-  init({
-    directory: api.resolve('.'),
-    appName: options.appName,
-    windowTitle: options.windowTitle,
-    distDir: 'Set automatically by Vue CLI plugin',
-    devPath: 'Set automatically by Vue CLI plugin'
-  })
+  cli.run([
+    'init',
+    '--directory', api.resolve('.'),
+    '--app-name', options.appName,
+    '--window-title', options.windowTitle,
+    '--dist-dir', 'Set automatically by Vue CLI plugin',
+    '--dev-path', 'Set automatically by Vue CLI plugin'
+  ])
 
   api.extendPackage({
     scripts: {
