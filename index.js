@@ -68,11 +68,6 @@ module.exports = (api, options) => {
         error
       } = require('@vue/cli-shared-utils')
 
-      // Use custom config for webpack
-      process.env.TAURI_BUILD = true
-      // Set publicPath so that scripts are properly imported
-      options.publicPath = ''
-
       if (!args['skip-bundle']) {
         try {
           await api.service.run('build', {
