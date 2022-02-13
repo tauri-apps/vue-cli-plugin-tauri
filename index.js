@@ -36,9 +36,6 @@ module.exports = (api, options) => {
     async () => {
       const cli = require('@tauri-apps/cli')
 
-      // Use custom config for webpack
-      process.env.TAURI_SERVE = true
-
       const server = await api.service.run('serve')
       const config = {
         build: {
