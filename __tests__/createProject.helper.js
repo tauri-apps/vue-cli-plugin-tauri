@@ -5,7 +5,8 @@ const path = require('path')
 module.exports = (projectName) => {
   const preset = { ...defaultPreset }
   preset.plugins['vue-cli-plugin-tauri'] = {
-    appName: 'app'
+    appName: 'app',
+    windowTitle: 'app'
   }
   delete preset.plugins['@vue/cli-plugin-eslint']
 
