@@ -92,11 +92,11 @@ module.exports = (api, options) => {
       }
       if (args.t || args.target) {
         cliArgs.push('--target')
-        cliArgs.push(args.t)
+        cliArgs.push(args.t ? args.t : args.target)
       }
       if (args.b || args.bundle) {
         cliArgs.push('--bundle')
-        cliArgs.push(args.b)
+        cliArgs.push(args.b ? args.b : args.bundle)
       }
       cli.run(cliArgs)
     }
