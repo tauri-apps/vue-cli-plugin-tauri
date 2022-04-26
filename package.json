@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-tauri",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "A Vue CLI plugin for rigging Tauri",
   "main": "index.js",
   "author": "Noah Klayman <noahklayman@gmail.com>",
@@ -11,7 +11,7 @@
     "pretest": "rimraf __tests__/temp_projects/*"
   },
   "dependencies": {
-    "@tauri-apps/cli": "1.0.0-rc.4",
+    "@tauri-apps/cli": "1.0.0-rc.9",
     "@vue/cli-shared-utils": "^4.1.1"
   },
   "devDependencies": {
