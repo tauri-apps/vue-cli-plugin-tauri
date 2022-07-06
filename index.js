@@ -98,7 +98,7 @@ module.exports = (api, options) => {
         cliArgs.push('--bundle')
         cliArgs.push(args.b ? args.b : args.bundle)
       }
-      cli.run(cliArgs)
+      await cli.run(cliArgs)
     }
   )
 }
