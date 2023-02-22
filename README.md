@@ -1,10 +1,10 @@
 # vue-cli-plugin-tauri
 
-> [Tauri](https://tauri.studio) is a toolkit for creating smaller, faster, and more secure desktops applications with a web frontend. This plugin configures Tauri to work in your Vue CLI project.
+> [Tauri](https://tauri.app) is a toolkit for creating smaller, faster, and more secure desktops applications with a web frontend. This plugin configures Tauri to work in your Vue CLI project.
 
 ## Installation
 
-Please visit the [documentation website](https://tauri.studio) or our [discord server](https://discord.gg/tauri) if you have any problems.
+Please visit the [documentation website](https://tauri.app) or our [discord server](https://discord.gg/tauri) if you have any problems.
 
 ### General Prerequisites:
 
@@ -14,9 +14,7 @@ Please visit the [documentation website](https://tauri.studio) or our [discord s
 
 ### Detailed Prerequisite Installation Instructions:
 
-- Linux: https://tauri.studio/docs/get-started/setup-linux
-- Mac: https://tauri.studio/docs/get-started/setup-macos
-- Windows: https://tauri.studio/docs/get-started/setup-windows
+https://tauri.app/v1/guides/getting-started/prerequisites
 
 ### Steps:
 
