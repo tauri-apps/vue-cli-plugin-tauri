@@ -2,6 +2,10 @@
 
 > [Tauri](https://tauri.app) is a toolkit for creating smaller, faster, and more secure desktops applications with a web frontend. This plugin configures Tauri to work in your Vue CLI project.
 
+## Deprecation Notice
+
+Just like [Vue CLI](https://cli.vuejs.org/) itself, this plugin is now **deprecated** and won't receive any updates anymore. Please migrate to [`@tauri-apps/cli`](https://www.npmjs.com/package/@tauri-apps/cli).
+
 ## Installation
 
 Please visit the [documentation website](https://tauri.app) or our [discord server](https://discord.gg/tauri) if you have any problems.
